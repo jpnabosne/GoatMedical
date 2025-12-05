@@ -150,3 +150,70 @@ ul {
 .contato-info span {
     display: inline-block;
 }
+
+/* --- ESTILOS ESPECÍFICOS DA PÁGINA DE CONTATO --- */
+
+.secao-contato {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.secao-contato h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.secao-contato > p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.contato-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-clara);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+    border-top: 5px solid var(--cor-primaria); /* Detalhe azul */
+}
+
+.card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.card a {
+    font-weight: 700;
+}
+
+.responsavel {
+    border-top-color: var(--cor-secundaria);
+}
+
+.nome-responsavel {
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    margin-bottom: 5px !important;
+}
+
+.responsavel span {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px; /* Alinha o texto da descrição */
+}
+
