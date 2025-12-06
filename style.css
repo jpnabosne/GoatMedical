@@ -2,13 +2,12 @@
 
 .logo {
     /* Define a largura da imagem como 3% da largura total do cabeçalho */
-    width: 12%;       
+    width: 17%;       
     
     /* Define uma altura fixa ou automática. Usamos 'auto' para manter a proporção. */
     height: auto;      
     
-    /* Define uma largura máxima para que ela não fique gigante em telas muito grandes */
-    max-width: 60px; 
+   
     
     /* Garante que a imagem não seja cortada e caiba no espaço */
     object-fit: contain; 
