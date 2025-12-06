@@ -1,20 +1,18 @@
-/* --- NOVO ESTILO PARA A IMAGEM DA LOGO (em Porcentagem) --- */
+/* --- NOVO ESTILO PARA A IMAGEM DA LOGO (DOBRANDO O TAMANHO) --- */
 
 .logo {
-    /* Define a largura da imagem como 3% da largura total do cabeçalho */
-    width: 17%;       
+    /* Dobramos de 5% para 10% da largura do cabeçalho */
+    width: 10%;       
     
-    /* Define uma altura fixa ou automática. Usamos 'auto' para manter a proporção. */
     height: auto;      
     
-   
+    /* Dobramos o limite máximo de 80px para 160px */
+    max-width: 160px; 
     
-    /* Garante que a imagem não seja cortada e caiba no espaço */
     object-fit: contain; 
-    
-    /* Pequena margem para separar do nome */
     margin-right: 5px; 
 }
+
 
 
 /* Variáveis para fácil alteração de cores */
