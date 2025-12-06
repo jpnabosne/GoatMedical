@@ -1,3 +1,7 @@
+.logo {
+    size: 5%
+}
+
 /* Variáveis para fácil alteração de cores */
 :root {
     --cor-primaria: #0056b3; /* Um tom de azul forte */
