@@ -1,3 +1,394 @@
+/* =========================================
+   1. VARIÁVEIS E RESET
+   ========================================= */
+:root {
+    --cor-primaria: #0056b3;   /* Azul forte */
+    --cor-secundaria: #004085; /* Azul escuro (hover/titulos) */
+    --cor-fundo: #f4f7f9;      /* Fundo claro */
+    --cor-texto: #333;         /* Texto padrão */
+    --cor-clara: #fff;         /* Branco */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
+.cabecalho {
+    background-color: var(--cor-clara);
+    color: var(--cor-primaria);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Centraliza em telas muito grandes */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* --- ESTILO DA LOGO (CORRIGIDO) --- */
+.logo-icone-img {
+    width: 80px; /* Tamanho fixo ideal para PC */
+    height: auto;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+.nome-empresa {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--cor-secundaria);
+}
+
+.subtitulo {
+    font-size: 0.9em;
+    color: var(--cor-primaria);
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+/* MENU */
+.menu-navegacao ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-navegacao a {
+    color: var(--cor-texto);
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao a.ativo {
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+/* =========================================
+   3. CONTEÚDO GERAL E HOME
+   ========================================= */
+.conteudo-principal {
+    padding: 40px 5%;
+    min-height: 60vh;
+    /* Centraliza conteúdo em telas grandes */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.apresentacao {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--cor-clara);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.apresentacao h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.apresentacao p {
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: var(--cor-texto);
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.btn-cta:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* =========================================
+   4. PÁGINA DE SERVIÇOS
+   ========================================= */
+.secao-servicos {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.secao-servicos h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+    font-size: 2.2em;
+}
+
+.secao-servicos > p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lista-servicos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.servico-card {
+    background-color: var(--cor-clara);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.servico-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--cor-primaria);
+}
+
+.servico-card h3 {
+    color: var(--cor-primaria);
+    padding: 20px 20px 10px 20px;
+    font-size: 1.4em;
+}
+
+.servico-card p {
+    padding: 0 20px;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.servico-card ul {
+    list-style: disc;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    color: #555;
+    font-size: 0.95em;
+}
+
+.servico-card ul li {
+    margin-bottom: 5px;
+}
+
+.btn-solicitar {
+    display: block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+    padding: 12px 20px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.btn-solicitar:hover {
+    background-color: var(--cor-primaria);
+}
+
+/* =========================================
+   5. PÁGINA DE CONTATO
+   ========================================= */
+.secao-contato {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.secao-contato h2 {
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+}
+
+.secao-contato > p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.contato-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--cor-clara);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 450px;
+    text-align: left;
+    border-top: 5px solid var(--cor-primaria);
+}
+
+.card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+.responsavel {
+    border-top-color: var(--cor-secundaria);
+}
+
+.nome-responsavel {
+    font-size: 1.2em;
+    color: var(--cor-texto);
+    margin-bottom: 5px !important;
+}
+
+.responsavel span {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+}
+
+/* =========================================
+   6. RODAPÉ
+   ========================================= */
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+    padding: 20px 5%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contato-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9em;
+}
+
+/* =========================================
+   7. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* --- CABEÇALHO --- */
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5%;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+        width: 100%; /* Ocupa largura para alinhar */
+    }
+
+    /* Ajuste da Logo para Celular */
+    .logo-icone-img {
+        width: 60px; /* Reduz um pouco no celular */
+    }
+    
+    .nome-empresa {
+        font-size: 1.4em;
+    }
+    
+    .subtitulo {
+        display: none; /* Esconde em telas muito pequenas */
+    }
+
+    /* --- MENU --- */
+    .menu-navegacao {
+        width: 100%;
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-navegacao li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-navegacao a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* --- GERAL --- */
+    .conteudo-principal {
+        padding: 20px 5%;
+    }
+    
+    .lista-servicos {
+        grid-template-columns: 1fr; /* Uma coluna só */
+    }
+
+    .contato-cards {
+        flex-direction: column;
+    }
+
+    /* --- RODAPÉ --- */
+    .contato-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
 /* ======================================= */
 /* === RESPONSIVIDADE (MEDIA QUERIES) === */
 /* ======================================= */
