@@ -1,6 +1,113 @@
+@media (min-width: 1200px) {
+    /* Define uma largura máxima para o conteúdo principal em telas grandes */
+    .conteudo-principal {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    /* Centraliza o cabeçalho mantendo a largura máxima */
+    .cabecalho {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* ======================================= */
+/* === RESPONSIVIDADE (MEDIA QUERIES) === */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    
+    /* --- CABEÇALHO --- */
+    .cabecalho {
+        /* Muda o cabeçalho para empilhar os elementos verticalmente */
+        flex-direction: column;
+        align-items: flex-start; /* Alinha tudo à esquerda */
+        padding: 15px 5%;
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Adiciona espaço entre o logo e o menu */
+    }
+
+    /* Ajusta o tamanho da logo no celular */
+    .logo-icone-img {
+        width: 15%; /* Pode ser um pouco maior em proporção */
+        max-width: 60px; /* Limite máximo menor para celular */
+    }
+    
+    .nome-empresa {
+        font-size: 1.4em;
+    }
+    
+    .subtitulo {
+        display: none; /* Esconde o subtítulo para economizar espaço */
+    }
+
+    /* --- MENU DE NAVEGAÇÃO --- */
+    .menu-navegacao {
+        width: 100%; /* Ocupa a largura total */
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column; /* Empilha os links um abaixo do outro */
+        gap: 5px;
+    }
+
+    .menu-navegacao li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-navegacao a {
+        display: block; /* Ocupa toda a área do item da lista */
+        padding: 8px 0;
+    }
+
+    /* --- CONTEÚDO GERAL --- */
+    .conteudo-principal {
+        padding: 20px 5%;
+    }
+    
+    /* --- PÁGINA DE CONTATO --- */
+    .contato-cards {
+        flex-direction: column; /* Empilha os cards de contato */
+        gap: 20px;
+    }
+
+    .card {
+        max-width: 100%; /* Ocupa toda a largura do container */
+    }
+    
+    /* --- PÁGINA DE SERVIÇOS --- */
+    .lista-servicos {
+        /* A grid original já é responsiva, mas garantimos que as colunas sejam fluidas */
+        grid-template-columns: 1fr; 
+        gap: 25px;
+    }
+
+    /* --- RODAPÉ --- */
+    .rodape-conteudo {
+        flex-direction: column;
+    }
+    
+    .contato-info {
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 15px;
+    }
+}
+
+
 /* --- NOVO ESTILO PARA A IMAGEM DA LOGO (DOBRANDO O TAMANHO) --- */
 
-.logo {
+.logo-image {
     /* Dobramos de 5% para 10% da largura do cabeçalho */
     width: 10%;       
     
