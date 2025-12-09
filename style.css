@@ -727,3 +727,102 @@ ul {
         text-align: center;
     }
 }
+
+        ```
+
+---
+
+### 2. Alteração no CSS (`style.css`)
+
+Agora, apague o estilo antigo `.home-numeros` (se quiser limpar o código) e adicione este novo estilo para a localização.
+
+Adicione isso ao final do seu arquivo `style.css`:
+
+```css
+/* =========================================
+   10. SEÇÃO ONDE ESTAMOS (HOSPITAL IDF)
+   ========================================= */
+
+.home-localizacao {
+    background-color: var(--cor-primaria); /* Mantém o fundo Azul Forte */
+    color: var(--cor-clara);
+    padding: 60px 5%;
+}
+
+.container-localizacao {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente texto e mapa */
+    gap: 50px;
+    justify-content: space-between;
+}
+
+/* --- Lado do Texto --- */
+.texto-localizacao {
+    flex: 1; /* Ocupa metade do espaço */
+    text-align: left;
+}
+
+.texto-localizacao h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff; /* Garante que o título seja branco */
+}
+
+.texto-localizacao p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.box-hospital {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco transparente */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #fff; /* Detalhe branco na lateral */
+}
+
+.box-hospital h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.nome-completo {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 10px !important;
+}
+
+.endereco {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* --- Lado do Mapa --- */
+.mapa-container {
+    flex: 1; /* Ocupa a outra metade */
+    min-width: 300px;
+}
+
+.mapa-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Responsividade da Localização --- */
+@media (max-width: 900px) {
+    .container-localizacao {
+        flex-direction: column; /* Empilha texto e mapa no celular/tablet */
+        text-align: center;
+    }
+
+    .texto-localizacao {
+        text-align: center;
+    }
+    
+    .mapa-container {
+        width: 100%;
+    }
+}
