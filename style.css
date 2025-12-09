@@ -476,3 +476,131 @@ ul {
     }
 }
 
+/* =========================================
+   8. ESTILOS DA PÁGINA SOBRE NÓS
+   ========================================= */
+
+/* --- Introdução --- */
+.sobre-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sobre-intro h2 {
+    color: var(--cor-secundaria);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.destaque-texto {
+    font-size: 1.3em;
+    color: var(--cor-primaria);
+    font-weight: 500;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+.sobre-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* --- Pilares (Cards) --- */
+.sobre-pilares {
+    margin-bottom: 80px;
+}
+
+.sobre-pilares h3 {
+    text-align: center;
+    color: var(--cor-secundaria);
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pilar-card {
+    background-color: var(--cor-clara);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-primaria);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.pilar-card:hover {
+    transform: translateY(-5px);
+}
+
+.pilar-card h4 {
+    color: var(--cor-secundaria);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+/* --- Liderança (Engenheiro) --- */
+.sobre-lideranca {
+    background-color: #eef4fa; /* Fundo levemente azulado para destaque */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.lideranca-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.foto-engenheiro img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 3px solid var(--cor-clara);
+}
+
+.texto-lideranca h3 {
+    color: var(--cor-primaria);
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.sub-lider {
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+.texto-lideranca p {
+    margin-bottom: 15px;
+}
+
+/* --- Responsividade Específica do Sobre Nós --- */
+@media (max-width: 768px) {
+    .lideranca-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-engenheiro img {
+        width: 100%; /* Foto ocupa largura total no celular */
+        max-width: 300px; /* Mas não passa de 300px */
+        height: auto;
+    }
+    
+    .destaque-texto {
+        font-size: 1.1em;
+    }
+}
