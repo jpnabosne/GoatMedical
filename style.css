@@ -37,14 +37,18 @@ ul {
 .cabecalho {
     background-color: var(--cor-clara);
     color: var(--cor-primaria);
-    padding: 15px 5%;
+    /* Padding lateral em % ajuda a manter o conteúdo longe da borda */
+    padding: 15px 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Centraliza em telas muito grandes */
-    max-width: 1200px;
-    margin: 0 auto;
+    
+    /* --- REMOVIDO O LIMITE DE LARGURA --- */
+    /* max-width: 1200px;  <- Esta linha foi removida */
+    /* margin: 0 auto;     <- Esta linha foi removida */
+    
+    width: 100%; /* Garante que ocupe tudo */
 }
 
 .logo-container {
