@@ -43,7 +43,7 @@ ul {
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* Centraliza em telas muito grandes */
-   /* max-width: 1200px; */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -53,9 +53,9 @@ ul {
     gap: 10px;
 }
 
-/* --- ESTILO DA LOGO (CORRIGIDO) --- */
+/* --- ESTILO DA LOGO (PC) --- */
 .logo-icone-img {
-    width: 80px; /* Tamanho fixo ideal para PC */
+    width: 80px; 
     height: auto;
     object-fit: contain;
     margin-right: 5px;
@@ -318,169 +318,8 @@ ul {
 }
 
 /* =========================================
-   7. RESPONSIVIDADE (MEDIA QUERIES)
+   7. ESTILOS DA PÁGINA SOBRE NÓS
    ========================================= */
-
-@media (max-width: 768px) {
-    /* --- CABEÇALHO --- */
-    .cabecalho {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 5%;
-    }
-
-    .logo-container {
-        margin-bottom: 15px;
-        width: 100%; /* Ocupa largura para alinhar */
-    }
-
-    /* Ajuste da Logo para Celular */
-    .logo-icone-img {
-        width: 60px; /* Reduz um pouco no celular */
-    }
-    
-    .nome-empresa {
-        font-size: 1.4em;
-    }
-    
-    .subtitulo {
-        display: none; /* Esconde em telas muito pequenas */
-    }
-
-    /* --- MENU --- */
-    .menu-navegacao {
-        width: 100%;
-    }
-
-    .menu-navegacao ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .menu-navegacao li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-    }
-
-    .menu-navegacao a {
-        display: block;
-        padding: 10px 0;
-    }
-
-    /* --- GERAL --- */
-    .conteudo-principal {
-        padding: 20px 5%;
-    }
-    
-    .lista-servicos {
-        grid-template-columns: 1fr; /* Uma coluna só */
-    }
-
-    .contato-cards {
-        flex-direction: column;
-    }
-
-    /* --- RODAPÉ --- */
-    .contato-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-
-/* ======================================= */
-/* === RESPONSIVIDADE (MEDIA QUERIES) === */
-/* ======================================= */
-
-@media (max-width: 768px) {
-    
-    /* --- CABEÇALHO --- */
-    .cabecalho {
-        /* Muda o cabeçalho para empilhar os elementos verticalmente */
-        flex-direction: column;
-        align-items: flex-start; /* Alinha tudo à esquerda */
-        padding: 15px 5%;
-    }
-
-    .logo-container {
-        margin-bottom: 10px; /* Adiciona espaço entre o logo e o menu */
-    }
-
-    /* Ajusta o tamanho da logo no celular */
-    .logo-icone-img {
-        width: 15%; /* Pode ser um pouco maior em proporção */
-        max-width: 60px; /* Limite máximo menor para celular */
-    }
-    
-    .nome-empresa {
-        font-size: 1.4em;
-    }
-    
-    .subtitulo {
-        display: none; /* Esconde o subtítulo para economizar espaço */
-    }
-
-    /* --- MENU DE NAVEGAÇÃO --- */
-    .menu-navegacao {
-        width: 100%; /* Ocupa a largura total */
-    }
-
-    .menu-navegacao ul {
-        flex-direction: column; /* Empilha os links um abaixo do outro */
-        gap: 5px;
-    }
-
-    .menu-navegacao li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-    }
-
-    .menu-navegacao a {
-        display: block; /* Ocupa toda a área do item da lista */
-        padding: 8px 0;
-    }
-
-    /* --- CONTEÚDO GERAL --- */
-    .conteudo-principal {
-        padding: 20px 5%;
-    }
-    
-    /* --- PÁGINA DE CONTATO --- */
-    .contato-cards {
-        flex-direction: column; /* Empilha os cards de contato */
-        gap: 20px;
-    }
-
-    .card {
-        max-width: 100%; /* Ocupa toda a largura do container */
-    }
-    
-    /* --- PÁGINA DE SERVIÇOS --- */
-    .lista-servicos {
-        /* A grid original já é responsiva, mas garantimos que as colunas sejam fluidas */
-        grid-template-columns: 1fr; 
-        gap: 25px;
-    }
-
-    /* --- RODAPÉ --- */
-    .rodape-conteudo {
-        flex-direction: column;
-    }
-    
-    .contato-info {
-        flex-direction: column;
-        gap: 5px;
-        margin-top: 15px;
-    }
-}
-
-/* =========================================
-   8. ESTILOS DA PÁGINA SOBRE NÓS
-   ========================================= */
-
-/* --- Introdução --- */
 .sobre-intro {
     text-align: center;
     margin-bottom: 60px;
@@ -506,7 +345,7 @@ ul {
     font-size: 1.1em;
 }
 
-/* --- Pilares (Cards) --- */
+/* --- Pilares --- */
 .sobre-pilares {
     margin-bottom: 80px;
 }
@@ -516,7 +355,6 @@ ul {
     color: var(--cor-secundaria);
     font-size: 1.8em;
     margin-bottom: 30px;
-    position: relative;
     display: inline-block;
     width: 100%;
 }
@@ -546,9 +384,9 @@ ul {
     margin-bottom: 15px;
 }
 
-/* --- Liderança (Engenheiro) --- */
+/* --- Liderança --- */
 .sobre-lideranca {
-    background-color: #eef4fa; /* Fundo levemente azulado para destaque */
+    background-color: #eef4fa;
     padding: 40px;
     border-radius: 10px;
 }
@@ -587,26 +425,8 @@ ul {
     margin-bottom: 15px;
 }
 
-/* --- Responsividade Específica do Sobre Nós --- */
-@media (max-width: 768px) {
-    .lideranca-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .foto-engenheiro img {
-        width: 100%; /* Foto ocupa largura total no celular */
-        max-width: 300px; /* Mas não passa de 300px */
-        height: auto;
-    }
-    
-    .destaque-texto {
-        font-size: 1.1em;
-    }
-}
-
 /* =========================================
-   9. SEÇÕES EXTRAS DA HOME (INDEX)
+   8. SEÇÕES EXTRAS DA HOME (Diferenciais e CTA)
    ========================================= */
 
 /* --- Diferenciais --- */
@@ -644,38 +464,7 @@ ul {
     font-size: 1.3em;
 }
 
-/* --- Números de Impacto --- */
-.home-numeros {
-    background-color: var(--cor-primaria); /* Fundo Azul Forte */
-    color: var(--cor-clara);
-    padding: 50px 5%;
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.numero-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.grande-numero {
-    font-size: 3em;
-    font-weight: 700;
-    line-height: 1;
-}
-
-.legenda-numero {
-    font-size: 1em;
-    opacity: 0.9;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-
-/* --- CTA Urgente (Faixa Final) --- */
+/* --- CTA Urgente --- */
 .home-cta-urgente {
     background-color: #eef4fa;
     padding: 60px 5%;
@@ -696,7 +485,7 @@ ul {
 }
 
 .btn-whatsapp {
-    background-color: #25D366; /* Verde WhatsApp */
+    background-color: #25D366;
     color: #fff;
     padding: 15px 30px;
     border-radius: 50px;
@@ -710,119 +499,109 @@ ul {
     background-color: #1ebe57;
 }
 
-/* --- Responsividade da Home --- */
+/* =========================================
+   9. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================= */
+
 @media (max-width: 768px) {
+    
+    /* --- CABEÇALHO (Ajustado) --- */
+    .cabecalho {
+        flex-direction: column;
+        align-items: center; /* Centraliza tudo no celular */
+        padding: 20px 5%;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+        width: 100%; 
+        justify-content: center; /* Logo e Nome centralizados */
+        gap: 10px;
+    }
+
+    /* Ajuste da Logo para Celular (MAIOR) */
+    .logo-icone-img {
+        width: 85px; 
+        margin-right: 5px;
+    }
+    
+    .nome-empresa {
+        font-size: 1.6em;
+        text-align: center;
+    }
+    
+    .subtitulo {
+        display: none; /* Esconde em telas muito pequenas */
+    }
+
+    /* --- MENU --- */
+    .menu-navegacao {
+        width: 100%;
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-navegacao li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-navegacao a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* --- GERAL --- */
+    .conteudo-principal {
+        padding: 20px 5%;
+    }
+    
+    .lista-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-cards {
+        flex-direction: column;
+    }
+
+    /* --- RODAPÉ --- */
+    .rodape-conteudo {
+        flex-direction: column;
+    }
+    
+    .contato-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* --- SOBRE --- */
+    .lideranca-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .foto-engenheiro img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    .destaque-texto {
+        font-size: 1.1em;
+    }
+
+    /* --- EXTRAS HOME --- */
     .container-diferenciais {
         flex-direction: column;
         gap: 30px;
     }
-    
-    .home-numeros {
-        flex-direction: column;
-        gap: 30px;
-    }
-
+   
     .home-cta-urgente {
         flex-direction: column;
         text-align: center;
-    }
-}
-
-        ```
-
----
-
-### 2. Alteração no CSS (`style.css`)
-
-Agora, apague o estilo antigo `.home-numeros` (se quiser limpar o código) e adicione este novo estilo para a localização.
-
-Adicione isso ao final do seu arquivo `style.css`:
-
-```css
-/* =========================================
-   10. SEÇÃO ONDE ESTAMOS (HOSPITAL IDF)
-   ========================================= */
-
-.home-localizacao {
-    background-color: var(--cor-primaria); /* Mantém o fundo Azul Forte */
-    color: var(--cor-clara);
-    padding: 60px 5%;
-}
-
-.container-localizacao {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center; /* Centraliza verticalmente texto e mapa */
-    gap: 50px;
-    justify-content: space-between;
-}
-
-/* --- Lado do Texto --- */
-.texto-localizacao {
-    flex: 1; /* Ocupa metade do espaço */
-    text-align: left;
-}
-
-.texto-localizacao h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #fff; /* Garante que o título seja branco */
-}
-
-.texto-localizacao p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    opacity: 0.9;
-}
-
-.box-hospital {
-    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco transparente */
-    padding: 20px;
-    border-radius: 8px;
-    border-left: 5px solid #fff; /* Detalhe branco na lateral */
-}
-
-.box-hospital h3 {
-    font-size: 1.5em;
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-.nome-completo {
-    font-style: italic;
-    font-size: 0.9em;
-    margin-bottom: 10px !important;
-}
-
-.endereco {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* --- Lado do Mapa --- */
-.mapa-container {
-    flex: 1; /* Ocupa a outra metade */
-    min-width: 300px;
-}
-
-.mapa-container iframe {
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* --- Responsividade da Localização --- */
-@media (max-width: 900px) {
-    .container-localizacao {
-        flex-direction: column; /* Empilha texto e mapa no celular/tablet */
-        text-align: center;
-    }
-
-    .texto-localizacao {
-        text-align: center;
-    }
-    
-    .mapa-container {
-        width: 100%;
     }
 }
