@@ -713,142 +713,134 @@ ul {
 }
 
 /* =========================================
-   12. SEÇÃO DESTAQUE DE LAUDOS (ANVISA)
+   12. SEÇÃO DESTAQUE DE LAUDOS (SEM FOTO)
    ========================================= */
 
 .secao-laudos-destaque {
-    background-color: #0d1b2a; /* Azul muito escuro, quase preto (Sério/Corporativo) */
+    background-color: #0d1b2a; /* Azul muito escuro */
     color: #fff;
     padding: 80px 0;
-    border-bottom: 5px solid var(--cor-primaria); /* Linha azul da marca embaixo */
+    border-bottom: 5px solid var(--cor-primaria);
+    text-align: center; /* Centraliza tudo */
 }
 
 .container-laudos {
-    max-width: 1200px;
+    max-width: 900px; /* Largura controlada para leitura confortável */
     margin: 0 auto;
     padding: 0 5%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 60px;
-    justify-content: space-between;
-}
-
-/* --- Lado do Texto --- */
-.conteudo-laudos {
-    flex: 1;
 }
 
 .alerta-anvisa {
     display: inline-block;
-    background-color: #ffc107; /* Amarelo Alerta */
+    background-color: #ffc107;
     color: #000;
     font-weight: 800;
-    padding: 5px 15px;
+    padding: 5px 20px;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    font-size: 0.85em;
+    font-size: 0.9em;
     letter-spacing: 1px;
 }
 
-.conteudo-laudos h2 {
+.secao-laudos-destaque h2 {
     font-size: 2.5em;
     line-height: 1.2;
     margin-bottom: 20px;
     color: #fff;
 }
 
-.conteudo-laudos p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+.texto-intro {
+    font-size: 1.2em;
+    margin-bottom: 30px;
     opacity: 0.9;
+    max-width: 800px;
 }
 
-/* Lista de Consequências (Multas, etc) */
+/* Lista de Consequências */
 .lista-consequencias {
-    margin-bottom: 30px;
-    background-color: rgba(255, 68, 68, 0.1); /* Fundo avermelhado leve */
-    padding: 20px;
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+    width: 100%;
+    max-width: 700px; /* Limita a largura para ficar bonito no centro */
+    margin-bottom: 40px;
+    background-color: rgba(255, 68, 68, 0.1);
+    padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid #ff4444; /* Vermelho perigo */
+    border-left: 5px solid #ff4444;
 }
 
 .lista-consequencias li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: 600;
+    font-size: 1.05em;
 }
 
 /* Box do que a fiscalização exige */
 .box-diferenca {
-    background-color: rgba(255, 255, 255, 0.05); /* Fundo sutil */
-    padding: 25px;
+    text-align: left; /* Texto à esquerda */
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 30px;
     border-radius: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .box-diferenca h3 {
-    color: var(--cor-primaria); /* Azul da marca */
+    color: var(--cor-primaria);
     margin-bottom: 15px;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 10px;
+}
+
+.box-diferenca p {
+    margin-bottom: 15px;
 }
 
 .box-diferenca ul li {
-    margin-bottom: 8px;
-    list-style: none; /* Remove bolinha padrão */
-    font-size: 0.95em;
+    margin-bottom: 10px;
+    list-style: none;
+    font-size: 1em;
 }
 
 /* Botão de Ação */
 .btn-regularizar {
     display: inline-block;
-    background-color: #25D366; /* Verde WhatsApp/Ação */
+    background-color: #25D366;
     color: #fff;
-    padding: 15px 35px;
+    padding: 18px 40px; /* Botão maior */
     border-radius: 5px;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em;
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .btn-regularizar:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
     background-color: #1ebe57;
 }
 
-/* --- Lado da Imagem --- */
-.imagem-laudos {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.imagem-laudos img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra forte */
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* --- Responsividade --- */
-@media (max-width: 900px) {
-    .container-laudos {
-        flex-direction: column;
-    }
-
-    .imagem-laudos {
-        order: -1; /* Joga a imagem para cima no celular (opcional) */
-        width: 100%;
-        margin-bottom: 30px;
+/* Responsividade */
+@media (max-width: 768px) {
+    .secao-laudos-destaque h2 {
+        font-size: 1.8em;
     }
     
-    .conteudo-laudos h2 {
-        font-size: 2em;
+    .texto-intro {
+        font-size: 1em;
     }
     
     .btn-regularizar {
-        width: 100%; /* Botão ocupa a tela toda no celular */
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
     }
 }
