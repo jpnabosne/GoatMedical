@@ -609,3 +609,105 @@ ul {
         text-align: center;
     }
 }
+
+/* =========================================
+   11. SEÇÃO EDUCATIVA (O QUE É ENG. CLÍNICA)
+   ========================================= */
+
+.secao-educativa {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Cinza bem clarinho para diferenciar do fundo branco */
+    border-top: 1px solid #e9ecef;
+}
+
+.container-educativo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.cabecalho-educativo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cabecalho-educativo h2 {
+    color: var(--cor-secundaria);
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.cabecalho-educativo p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Grid dos Cards */
+.grid-explicacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-explicacao {
+    background-color: var(--cor-clara);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--cor-primaria); /* Topo azul */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.card-explicacao:hover {
+    transform: translateY(-5px); /* Efeito de subir ao passar o mouse */
+    border-top-color: var(--cor-secundaria);
+}
+
+.card-explicacao h3 {
+    color: var(--cor-primaria);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.definicao {
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+    font-size: 1.05em;
+}
+
+.detalhe {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Faz o texto ocupar o espaço disponível para alinhar o rodapé */
+    line-height: 1.6;
+}
+
+.tag-importancia {
+    display: block;
+    background-color: #eef4fa;
+    color: var(--cor-secundaria);
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.85em;
+    font-weight: 600;
+    border-left: 4px solid var(--cor-secundaria);
+}
+
+/* Responsividade desta seção */
+@media (max-width: 768px) {
+    .cabecalho-educativo h2 {
+        font-size: 1.8em;
+    }
+    
+    .grid-explicacao {
+        grid-template-columns: 1fr; /* Um card por linha no celular */
+    }
+}
