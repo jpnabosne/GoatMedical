@@ -911,3 +911,79 @@ details p {
     padding-left: 10px;
     border-left: 3px solid var(--cor-primaria);
 }
+
+/* =========================================
+   15. SEÇÃO DE MARCAS / PARCEIROS
+   ========================================= */
+.secao-marcas {
+    padding: 50px 0;
+    background-color: #f4f7f9; /* Mesmo fundo claro do site */
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.container-marcas {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.secao-marcas h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.secao-marcas p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.grid-logos {
+    display: flex;
+    justify-content: center; /* Centraliza os logos */
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebrar linha no celular */
+    gap: 40px;
+}
+
+.logo-item {
+    width: 150px; /* Tamanho da caixa do logo */
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    
+    /* O SEGREDO DO DESIGN: Deixa cinza e meio transparente */
+    filter: grayscale(100%) opacity(0.6); 
+    transition: filter 0.3s, transform 0.3s;
+}
+
+/* Efeito ao passar o mouse */
+.logo-item:hover img {
+    filter: grayscale(0%) opacity(1); /* Volta a cor original */
+    transform: scale(1.1); /* Aumenta um pouquinho */
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .grid-logos {
+        gap: 20px;
+    }
+    .logo-item {
+        width: 100px; /* Logos menores no celular */
+        height: 60px;
+    }
+}
