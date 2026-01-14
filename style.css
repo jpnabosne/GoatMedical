@@ -291,11 +291,6 @@ ul {
     margin-bottom: 5px !important;
 }
 
-.responsavel span {
-    font-weight: bold;
-    display: inline-block;
-    width: 100px;
-}
 
 /* =========================================
    6. RODAPÉ
@@ -979,35 +974,62 @@ details p {
     }
 }
 
-/* Estilo para as linhas de informação */
-.info-row {
-    display: flex;            /* Coloca um ao lado do outro */
-    align-items: center;      /* Alinha verticalmente no centro */
-    margin-bottom: 8px;       /* Espaço entre as linhas */
-    gap: 10px;                /* Espaço mínimo entre o rótulo e o valor */
-}
+/* =========================================
+   ESTILOS INTERNOS DO CARD (Engenheiro)
+   ========================================= */
 
-.info-row .label {
-    font-weight: bold;
+/* O nome do Engenheiro */
+.nome-eng {
+    font-size: 1.2em;
     color: #333;
-    min-width: 130px;         /* O PULO DO GATO: Define uma largura fixa para os rótulos */
-    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
-.info-row .valor {
+/* --- NOVO CÓDIGO FLEXBOX (Copia aqui) --- */
+.info-linha {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha o texto na mesma altura */
+    margin-bottom: 8px;
+    gap: 10px;
+}
+
+.rotulo {
+    font-weight: bold;
+    color: #0d1b2a;
+    text-align: right;
+    min-width: 120px; /* Garante o espaço para "CREA/CONFEA" */
+}
+
+.valor {
     color: #555;
-    flex: 1;                  /* O valor ocupa o resto do espaço disponível */
+    text-align: left;
+    flex: 1;
+    max-width: 200px;
 }
 
-/* Ajuste para telas muito pequenas (celular) */
-@media (max-width: 400px) {
-    .info-row {
-        flex-direction: column; /* No celular fica um embaixo do outro para não quebrar */
-        align-items: flex-start;
+/* Link do telefone */
+.link-telefone {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #007bff; /* Ou a cor primária do seu site */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsividade para celular */
+@media (max-width: 480px) {
+    .info-linha {
+        flex-direction: column;
         gap: 2px;
     }
-    
-    .info-row .label {
-        min-width: auto; /* Remove a largura fixa no celular */
+    .rotulo {
+        text-align: center;
+        min-width: auto;
+    }
+    .valor {
+        text-align: center;
     }
 }
