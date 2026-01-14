@@ -237,60 +237,132 @@ ul {
 /* =========================================
    5. PÁGINA DE CONTATO
    ========================================= */
+/* =========================================
+   5. PÁGINA DE CONTATO (REVISADO E OTIMIZADO)
+   ========================================= */
+
 .secao-contato {
     text-align: center;
-    padding: 30px 0;
+    padding: 60px 5%; /* Aumentei um pouco o espaçamento para ficar mais elegante */
+    background-color: var(--cor-fundo);
 }
 
 .secao-contato h2 {
     color: var(--cor-secundaria);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 2.2em;
 }
 
 .secao-contato > p {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-size: 1.1em;
+    color: #666;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contato-cards {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+/* --- O CARD DO ENGENHEIRO (CAIXA BRANCA) --- */
+.card-contato {
+    background-color: #fff;        /* Traz o fundo branco de volta */
+    padding: 40px;                 /* Espaço interno generoso */
+    border-radius: 15px;           /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave para destacar do fundo */
+    max-width: 600px;              /* Largura ideal para leitura */
+    margin: 0 auto;                /* Centraliza a caixa na tela */
+    border-top: 5px solid var(--cor-primaria); /* Detalhe azul no topo */
+    text-align: center;            /* Centraliza os textos dentro do card */
 }
 
-.card {
-    background-color: var(--cor-clara);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 450px;
-    text-align: left;
-    border-top: 5px solid var(--cor-primaria);
-}
-
-.card h3 {
-    color: var(--cor-primaria);
+.card-contato h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.6em;
     margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Linha fina separando o título */
 }
 
-.card p {
+/* --- ESTILOS INTERNOS (TEXTOS E ALINHAMENTO) --- */
+
+/* Nome do Engenheiro */
+.nome-eng {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* Flexbox para alinhar "Rótulo" e "Valor" perfeitamente */
+.info-linha {
+    display: flex;
+    justify-content: center; /* Centraliza o conjunto na linha */
+    align-items: center;     /* Alinha verticalmente */
+    margin-bottom: 10px;     /* Espaço entre as linhas */
+    gap: 15px;               /* Espaço entre o rótulo e o valor */
+}
+
+.rotulo {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    text-align: right;       /* Texto alinhado à direita para "colar" no valor */
+    min-width: 130px;        /* O SEGREDO: Reserva espaço fixo para não encavalar o CREA */
+}
+
+.valor {
+    color: #555;
+    text-align: left;        /* Valor alinhado à esquerda */
+    flex: 1;                 /* Ocupa o espaço necessário */
+    max-width: 250px;        /* Limite para não esticar demais */
+}
+
+.texto-extra {
+    margin-top: 30px;
+    font-size: 0.95em;
+    color: #777;
     margin-bottom: 10px;
 }
 
-.responsavel {
-    border-top-color: var(--cor-secundaria);
+/* Link do telefone com destaque */
+.link-telefone {
+    display: inline-block;
+    font-size: 1.3em;
+    color: var(--cor-primaria);
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+    background-color: #f0f7ff; /* Fundo azul bem clarinho no telefone */
+    padding: 10px 25px;
+    border-radius: 50px;
 }
 
-.nome-responsavel {
-    font-size: 1.2em;
-    color: var(--cor-texto);
-    margin-bottom: 5px !important;
+.link-telefone:hover {
+    transform: scale(1.05);
+    color: var(--cor-secundaria);
+    background-color: #e6f0fa;
 }
 
+/* --- RESPONSIVIDADE (CELULAR) --- */
+@media (max-width: 500px) {
+    .card-contato {
+        padding: 25px;
+    }
+
+    /* No celular, coloca um embaixo do outro para facilitar leitura */
+    .info-linha {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+    .rotulo {
+        text-align: center;
+        min-width: auto; /* Remove a largura fixa no celular */
+    }
+
+    .valor {
+        text-align: center;
+    }
+}
 
 /* =========================================
    6. RODAPÉ
@@ -971,65 +1043,5 @@ details p {
     .logo-item {
         width: 100px; /* Logos menores no celular */
         height: 60px;
-    }
-}
-
-/* =========================================
-   ESTILOS INTERNOS DO CARD (Engenheiro)
-   ========================================= */
-
-/* O nome do Engenheiro */
-.nome-eng {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-/* --- NOVO CÓDIGO FLEXBOX (Copia aqui) --- */
-.info-linha {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Alinha o texto na mesma altura */
-    margin-bottom: 8px;
-    gap: 10px;
-}
-
-.rotulo {
-    font-weight: bold;
-    color: #0d1b2a;
-    text-align: right;
-    min-width: 120px; /* Garante o espaço para "CREA/CONFEA" */
-}
-
-.valor {
-    color: #555;
-    text-align: left;
-    flex: 1;
-    max-width: 200px;
-}
-
-/* Link do telefone */
-.link-telefone {
-    display: block;
-    margin-top: 20px;
-    font-size: 1.1em;
-    color: #007bff; /* Ou a cor primária do seu site */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Responsividade para celular */
-@media (max-width: 480px) {
-    .info-linha {
-        flex-direction: column;
-        gap: 2px;
-    }
-    .rotulo {
-        text-align: center;
-        min-width: auto;
-    }
-    .valor {
-        text-align: center;
     }
 }
