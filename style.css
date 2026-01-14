@@ -978,3 +978,36 @@ details p {
         height: 60px;
     }
 }
+
+/* Estilo para as linhas de informação */
+.info-row {
+    display: flex;            /* Coloca um ao lado do outro */
+    align-items: center;      /* Alinha verticalmente no centro */
+    margin-bottom: 8px;       /* Espaço entre as linhas */
+    gap: 10px;                /* Espaço mínimo entre o rótulo e o valor */
+}
+
+.info-row .label {
+    font-weight: bold;
+    color: #333;
+    min-width: 130px;         /* O PULO DO GATO: Define uma largura fixa para os rótulos */
+    display: inline-block;
+}
+
+.info-row .valor {
+    color: #555;
+    flex: 1;                  /* O valor ocupa o resto do espaço disponível */
+}
+
+/* Ajuste para telas muito pequenas (celular) */
+@media (max-width: 400px) {
+    .info-row {
+        flex-direction: column; /* No celular fica um embaixo do outro para não quebrar */
+        align-items: flex-start;
+        gap: 2px;
+    }
+    
+    .info-row .label {
+        min-width: auto; /* Remove a largura fixa no celular */
+    }
+}
