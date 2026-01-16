@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoatMedical - Links</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CONFIGURAÇÕES GERAIS --- */
+        :root {
+            --bg-color: #f4f6f8;       /* Fundo da página (Cinza bem claro) */
+            --primary-color: #0d2b45;  /* Azul Marinho (Cor da Marca) */
+            --accent-color: #20c997;   /* Verde Saúde (Detalhes) */
+            --text-color: #333;        /* Cor do texto */
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        /* --- PERFIL --- */
+        .profile-container {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .profile-bio {
+            font-size: 0.95rem;
+            color: #666;
+            max-width: 400px;
+        }
+
+        /* --- LISTA DE LINKS --- */
+        .links-container {
+            width: 100%;
+            max-width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Espaço entre botões */
+        }
+
+        .link-btn {
+            background-color: var(--white);
+            color: var(--primary-color);
+            padding: 18px 25px;
+            border-radius: 50px; /* Bordas redondas */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Centraliza o texto */
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        /* Ícone posicionado à esquerda absoluta para manter texto centralizado */
+        .link-btn i {
+            position: absolute;
+            left: 25px;
+            font-size: 1.3rem;
+        }
+
+        /* Efeito ao passar o mouse */
+        .link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Destaque para o WhatsApp (Opcional) */
+        .whatsapp-btn {
+            background-color: var(--accent-color);
+            color: var(--white);
+        }
+        .whatsapp-btn:hover {
+            background-color: #1aa179; /* Verde mais escuro */
+            border-color: transparent;
+        }
+
+        /* --- RODAPÉ --- */
+        footer {
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Animação suave de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="profile-container">
+        <img src="https://via.placeholder.com/150" alt="Logo GoatMedical" class="profile-img">
+        
+        <h1 class="profile-name">GoatMedical</h1>
+        <p class="profile-bio">Inovação e tecnologia a serviço da saúde.</p>
+    </div>
+
+    <div class="links-container">
+        
+        <a href="https://wa.me/5542999653970" target="_blank" class="link-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            Falar no WhatsApp
+        </a>
+
+        <a href="https://www.goatmedical.com.br" target="_blank" class="link-btn">
+            <i class="fas fa-globe"></i>
+            Visite nosso Site
+        </a>
+
+        <a href="https://www.linkedin.com/company/goatmedical" target="_blank" class="link-btn">
+            <i class="fab fa-linkedin-in"></i>
+            LinkedIn
+        </a>
+
+        <a href="mailto:atendimento.goatmedical@gmail.com.br" class="link-btn">
+            <i class="far fa-envelope"></i>
+            Enviar E-mail
+        </a>
+
+        <a href="https://instagram.com/goatmedical" target="_blank" class="link-btn">
+            <i class="fab fa-instagram"></i>
+            Instagram
+        </a>
+
+    </div>
+
+    <footer>
+        © 2024 GoatMedical
+    </footer>
+
+</body>
+</html>
