@@ -37,18 +37,12 @@ ul {
 .cabecalho {
     background-color: var(--cor-clara);
     color: var(--cor-primaria);
-    /* Padding lateral em % ajuda a manter o conteúdo longe da borda */
     padding: 15px 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-    /* --- REMOVIDO O LIMITE DE LARGURA --- */
-    /* max-width: 1200px;  <- Esta linha foi removida */
-    /* margin: 0 auto;     <- Esta linha foi removida */
-    
-    width: 100%; /* Garante que ocupe tudo */
+    width: 100%;
 }
 
 .logo-container {
@@ -57,7 +51,7 @@ ul {
     gap: 10px;
 }
 
-/* --- ESTILO DA LOGO (PC) --- */
+/* --- ESTILO DA LOGO --- */
 .logo-icone-img {
     width: 80px; 
     height: auto;
@@ -103,7 +97,6 @@ ul {
 .conteudo-principal {
     padding: 40px 5%;
     min-height: 60vh;
-    /* Centraliza conteúdo em telas grandes */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -160,8 +153,7 @@ ul {
     margin-bottom: 40px;
     font-size: 1.1em;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .lista-servicos {
@@ -237,13 +229,10 @@ ul {
 /* =========================================
    5. PÁGINA DE CONTATO
    ========================================= */
-/* =========================================
-   5. PÁGINA DE CONTATO (REVISADO E OTIMIZADO)
-   ========================================= */
 
 .secao-contato {
     text-align: center;
-    padding: 60px 5%; /* Aumentei um pouco o espaçamento para ficar mais elegante */
+    padding: 60px 5%;
     background-color: var(--cor-fundo);
 }
 
@@ -258,20 +247,19 @@ ul {
     font-size: 1.1em;
     color: #666;
     max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-/* --- O CARD DO ENGENHEIRO (CAIXA BRANCA) --- */
+/* --- CARD DO ENGENHEIRO --- */
 .card-contato {
-    background-color: #fff;        /* Traz o fundo branco de volta */
-    padding: 40px;                 /* Espaço interno generoso */
-    border-radius: 15px;           /* Bordas arredondadas */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave para destacar do fundo */
-    max-width: 600px;              /* Largura ideal para leitura */
-    margin: 0 auto;                /* Centraliza a caixa na tela */
-    border-top: 5px solid var(--cor-primaria); /* Detalhe azul no topo */
-    text-align: center;            /* Centraliza os textos dentro do card */
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    max-width: 600px;
+    margin: 0 auto;
+    border-top: 5px solid var(--cor-primaria);
+    text-align: center;
 }
 
 .card-contato h3 {
@@ -279,12 +267,10 @@ ul {
     font-size: 1.6em;
     margin-bottom: 20px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee; /* Linha fina separando o título */
+    border-bottom: 1px solid #eee;
 }
 
 /* --- ESTILOS INTERNOS (TEXTOS E ALINHAMENTO) --- */
-
-/* Nome do Engenheiro */
 .nome-eng {
     font-size: 1.3em;
     color: #333;
@@ -292,27 +278,27 @@ ul {
     font-weight: 600;
 }
 
-/* Flexbox para alinhar "Rótulo" e "Valor" perfeitamente */
+/* Flexbox para alinhar "Rótulo" e "Valor" */
 .info-linha {
     display: flex;
-    justify-content: center; /* Centraliza o conjunto na linha */
-    align-items: center;     /* Alinha verticalmente */
-    margin-bottom: 10px;     /* Espaço entre as linhas */
-    gap: 15px;               /* Espaço entre o rótulo e o valor */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 15px;
 }
 
 .rotulo {
     font-weight: bold;
     color: var(--cor-secundaria);
-    text-align: right;       /* Texto alinhado à direita para "colar" no valor */
-    min-width: 130px;        /* O SEGREDO: Reserva espaço fixo para não encavalar o CREA */
+    text-align: right;
+    min-width: 130px;
 }
 
 .valor {
     color: #555;
-    text-align: left;        /* Valor alinhado à esquerda */
-    flex: 1;                 /* Ocupa o espaço necessário */
-    max-width: 250px;        /* Limite para não esticar demais */
+    text-align: left;
+    flex: 1;
+    max-width: 250px;
 }
 
 .texto-extra {
@@ -322,7 +308,6 @@ ul {
     margin-bottom: 10px;
 }
 
-/* Link do telefone com destaque */
 .link-telefone {
     display: inline-block;
     font-size: 1.3em;
@@ -330,7 +315,7 @@ ul {
     font-weight: 800;
     text-decoration: none;
     transition: transform 0.2s, color 0.2s;
-    background-color: #f0f7ff; /* Fundo azul bem clarinho no telefone */
+    background-color: #f0f7ff;
     padding: 10px 25px;
     border-radius: 50px;
 }
@@ -341,24 +326,20 @@ ul {
     background-color: #e6f0fa;
 }
 
-/* --- RESPONSIVIDADE (CELULAR) --- */
+/* --- RESPONSIVIDADE CARD CONTATO --- */
 @media (max-width: 500px) {
     .card-contato {
         padding: 25px;
     }
-
-    /* No celular, coloca um embaixo do outro para facilitar leitura */
     .info-linha {
         flex-direction: column;
         gap: 5px;
         margin-bottom: 20px;
     }
-
     .rotulo {
         text-align: center;
-        min-width: auto; /* Remove a largura fixa no celular */
+        min-width: auto;
     }
-
     .valor {
         text-align: center;
     }
@@ -389,7 +370,7 @@ ul {
 }
 
 /* =========================================
-   7. ESTILOS DA PÁGINA SOBRE NÓS
+   7. PÁGINA SOBRE NÓS
    ========================================= */
 .sobre-intro {
     text-align: center;
@@ -497,10 +478,8 @@ ul {
 }
 
 /* =========================================
-   8. SEÇÕES EXTRAS DA HOME (Diferenciais e CTA)
+   8. DIFERENCIAIS E CTA
    ========================================= */
-
-/* --- Diferenciais --- */
 .home-diferenciais {
     padding: 60px 0;
     background-color: var(--cor-clara);
@@ -535,7 +514,7 @@ ul {
     font-size: 1.3em;
 }
 
-/* --- CTA Urgente --- */
+/* CTA Urgente */
 .home-cta-urgente {
     background-color: #eef4fa;
     padding: 60px 5%;
@@ -571,119 +550,11 @@ ul {
 }
 
 /* =========================================
-   9. RESPONSIVIDADE (MEDIA QUERIES)
+   9. SEÇÃO EDUCATIVA (O QUE É ENG. CLÍNICA)
    ========================================= */
-
-@media (max-width: 768px) {
-    
-    /* --- CABEÇALHO (Ajustado) --- */
-    .cabecalho {
-        flex-direction: column;
-        align-items: center; /* Centraliza tudo no celular */
-        padding: 20px 5%;
-    }
-
-    .logo-container {
-        margin-bottom: 20px;
-        width: 100%; 
-        justify-content: center; /* Logo e Nome centralizados */
-        gap: 10px;
-    }
-
-    /* Ajuste da Logo para Celular (MAIOR) */
-    .logo-icone-img {
-        width: 85px; 
-        margin-right: 5px;
-    }
-    
-    .nome-empresa {
-        font-size: 1.6em;
-        text-align: center;
-    }
-    
-    .subtitulo {
-        display: none; /* Esconde em telas muito pequenas */
-    }
-
-    /* --- MENU --- */
-    .menu-navegacao {
-        width: 100%;
-    }
-
-    .menu-navegacao ul {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .menu-navegacao li {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #eee;
-    }
-
-    .menu-navegacao a {
-        display: block;
-        padding: 10px 0;
-    }
-
-    /* --- GERAL --- */
-    .conteudo-principal {
-        padding: 20px 5%;
-    }
-    
-    .lista-servicos {
-        grid-template-columns: 1fr;
-    }
-
-    .contato-cards {
-        flex-direction: column;
-    }
-
-    /* --- RODAPÉ --- */
-    .rodape-conteudo {
-        flex-direction: column;
-    }
-    
-    .contato-info {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    /* --- SOBRE --- */
-    .lideranca-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .foto-engenheiro img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
-    
-    .destaque-texto {
-        font-size: 1.1em;
-    }
-
-    /* --- EXTRAS HOME --- */
-    .container-diferenciais {
-        flex-direction: column;
-        gap: 30px;
-    }
-   
-    .home-cta-urgente {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
-/* =========================================
-   11. SEÇÃO EDUCATIVA (O QUE É ENG. CLÍNICA)
-   ========================================= */
-
 .secao-educativa {
     padding: 80px 0;
-    background-color: #f8f9fa; /* Cinza bem clarinho para diferenciar do fundo branco */
+    background-color: #f8f9fa;
     border-top: 1px solid #e9ecef;
 }
 
@@ -711,7 +582,6 @@ ul {
     color: #555;
 }
 
-/* Grid dos Cards */
 .grid-explicacao {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -723,14 +593,14 @@ ul {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--cor-primaria); /* Topo azul */
+    border-top: 4px solid var(--cor-primaria);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease;
 }
 
 .card-explicacao:hover {
-    transform: translateY(-5px); /* Efeito de subir ao passar o mouse */
+    transform: translateY(-5px);
     border-top-color: var(--cor-secundaria);
 }
 
@@ -753,7 +623,7 @@ ul {
     font-size: 0.95em;
     color: #666;
     margin-bottom: 20px;
-    flex-grow: 1; /* Faz o texto ocupar o espaço disponível para alinhar o rodapé */
+    flex-grow: 1;
     line-height: 1.6;
 }
 
@@ -768,31 +638,19 @@ ul {
     border-left: 4px solid var(--cor-secundaria);
 }
 
-/* Responsividade desta seção */
-@media (max-width: 768px) {
-    .cabecalho-educativo h2 {
-        font-size: 1.8em;
-    }
-    
-    .grid-explicacao {
-        grid-template-columns: 1fr; /* Um card por linha no celular */
-    }
-}
-
 /* =========================================
-   12. SEÇÃO DESTAQUE DE LAUDOS (SEM FOTO)
+   10. SEÇÃO DESTAQUE DE LAUDOS
    ========================================= */
-
 .secao-laudos-destaque {
-    background-color: #0d1b2a; /* Azul muito escuro */
+    background-color: #0d1b2a;
     color: #fff;
     padding: 80px 0;
     border-bottom: 5px solid var(--cor-primaria);
-    text-align: center; /* Centraliza tudo */
+    text-align: center;
 }
 
 .container-laudos {
-    max-width: 900px; /* Largura controlada para leitura confortável */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 5%;
     display: flex;
@@ -827,11 +685,10 @@ ul {
     max-width: 800px;
 }
 
-/* Lista de Consequências */
 .lista-consequencias {
-    text-align: left; /* Mantém o texto alinhado à esquerda */
+    text-align: left;
     width: 100%;
-    max-width: 700px; /* Limita a largura para ficar bonito no centro */
+    max-width: 700px;
     margin-bottom: 40px;
     background-color: rgba(255, 68, 68, 0.1);
     padding: 25px;
@@ -845,9 +702,8 @@ ul {
     font-size: 1.05em;
 }
 
-/* Box do que a fiscalização exige */
 .box-diferenca {
-    text-align: left; /* Texto à esquerda */
+    text-align: left;
     width: 100%;
     max-width: 700px;
     background-color: rgba(255, 255, 255, 0.05);
@@ -875,12 +731,11 @@ ul {
     font-size: 1em;
 }
 
-/* Botão de Ação */
 .btn-regularizar {
     display: inline-block;
     background-color: #25D366;
     color: #fff;
-    padding: 18px 40px; /* Botão maior */
+    padding: 18px 40px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 1.2em;
@@ -895,25 +750,8 @@ ul {
     background-color: #1ebe57;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .secao-laudos-destaque h2 {
-        font-size: 1.8em;
-    }
-    
-    .texto-intro {
-        font-size: 1em;
-    }
-    
-    .btn-regularizar {
-        width: 100%;
-        padding: 15px;
-        font-size: 1em;
-    }
-}
-
 /* =========================================
-   14. SEÇÃO FAQ (PERGUNTAS FREQUENTES)
+   11. SEÇÃO FAQ
    ========================================= */
 .secao-faq {
     padding: 60px 5%;
@@ -921,7 +759,7 @@ ul {
 }
 
 .container-faq {
-    max-width: 800px; /* Mais estreito para facilitar leitura */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -950,14 +788,13 @@ details[open] {
 summary {
     font-weight: 700;
     color: var(--cor-texto);
-    list-style: none; /* Remove a setinha padrão feia */
+    list-style: none;
     font-size: 1.1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Cria uma setinha customizada bonita */
 summary::after {
     content: '+'; 
     font-size: 1.5em;
@@ -967,7 +804,7 @@ summary::after {
 }
 
 details[open] summary::after {
-    transform: rotate(45deg); /* Vira um X quando aberto */
+    transform: rotate(45deg);
     content: '+';
 }
 
@@ -980,11 +817,11 @@ details p {
 }
 
 /* =========================================
-   15. SEÇÃO DE MARCAS / PARCEIROS
+   12. SEÇÃO DE MARCAS
    ========================================= */
 .secao-marcas {
     padding: 50px 0;
-    background-color: #f4f7f9; /* Mesmo fundo claro do site */
+    background-color: #f4f7f9;
     text-align: center;
     border-top: 1px solid #e0e0e0;
 }
@@ -1012,14 +849,14 @@ details p {
 
 .grid-logos {
     display: flex;
-    justify-content: center; /* Centraliza os logos */
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Permite quebrar linha no celular */
+    flex-wrap: wrap;
     gap: 40px;
 }
 
 .logo-item {
-    width: 150px; /* Tamanho da caixa do logo */
+    width: 150px;
     height: 80px;
     display: flex;
     align-items: center;
@@ -1033,26 +870,11 @@ details p {
     object-fit: contain;
 }
 
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .grid-logos {
-        gap: 20px;
-    }
-    .logo-item {
-        width: 100px; /* Logos menores no celular */
-        height: 60px;
-    }
-}
-
 /* =========================================
-   PÁGINA DE EQUIPAMENTOS (NOVO)
+   13. PÁGINA DE EQUIPAMENTOS
    ========================================= */
-
-/* Banner simples no topo da página */
 .banner-pagina {
-    background-color: var(--cor-primaria); /* Azul do seu tema */
+    background-color: var(--cor-primaria);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
@@ -1070,7 +892,6 @@ details p {
     margin: 0 auto;
 }
 
-/* Container do Grid */
 .secao-lista-equipamentos {
     padding: 60px 5%;
     background-color: #fff;
@@ -1078,16 +899,14 @@ details p {
 
 .container-grid {
     display: grid;
-    /* Grid responsivo automático: ajusta o número de colunas conforme a tela */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* O Card de cada aparelho */
 .card-equipamento {
-    background-color: var(--cor-fundo); /* Fundo cinza claro */
+    background-color: var(--cor-fundo);
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -1096,14 +915,14 @@ details p {
 }
 
 .card-equipamento:hover {
-    transform: translateY(-5px); /* Sobe ao passar o mouse */
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     background-color: #fff;
     border-color: var(--cor-primaria);
 }
 
 .icone-eq {
-    font-size: 3em; /* Tamanho do emoji */
+    font-size: 3em;
     margin-bottom: 15px;
     display: block;
 }
@@ -1120,7 +939,6 @@ details p {
     line-height: 1.5;
 }
 
-/* Chamada final (CTA) */
 .cta-equipamentos {
     text-align: center;
     padding: 60px 20px;
@@ -1137,4 +955,96 @@ details p {
 .cta-equipamentos p {
     margin-bottom: 30px;
     color: #555;
+}
+
+/* =========================================
+   14. RESPONSIVIDADE GLOBAL (MEDIA QUERIES)
+   ========================================= */
+
+@media (max-width: 768px) {
+    /* Cabeçalho */
+    .cabecalho {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5%;
+    }
+
+    .logo-container {
+        margin-bottom: 20px;
+        width: 100%; 
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo-icone-img {
+        width: 85px; 
+    }
+    
+    .nome-empresa {
+        font-size: 1.6em;
+        text-align: center;
+    }
+    
+    .subtitulo {
+        display: none;
+    }
+
+    /* Menu Vertical */
+    .menu-navegacao {
+        width: 100%;
+    }
+
+    .menu-navegacao ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-navegacao li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-navegacao a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Ajustes Gerais */
+    .conteudo-principal {
+        padding: 20px 5%;
+    }
+    
+    .lista-servicos, 
+    .grid-explicacao,
+    .container-diferenciais,
+    .home-cta-urgente,
+    .contato-info,
+    .lideranca-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .grid-logos {
+        gap: 20px;
+    }
+    
+    .logo-item {
+        width: 100px;
+        height: 60px;
+    }
+
+    .foto-engenheiro img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .secao-laudos-destaque h2 {
+        font-size: 1.8em;
+    }
+    
+    .btn-regularizar {
+        width: 100%;
+        font-size: 1em;
+    }
 }
