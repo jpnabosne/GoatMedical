@@ -1,15 +1,17 @@
-// main.js
-
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. O HTML do seu Menu (Você só mexe aqui agora!)
+    // 1. Cria o HTML do cabeçalho com as classes EXATAS do seu CSS
     const menuHTML = `
         <header class="cabecalho">
-            <div class="logo">
-                <h1>Goat Medical</h1> 
+            <div class="logo-container">
+                <div>
+                    <h1 class="nome-empresa" style="font-size: 1.5em; margin:0;">Goat Medical</h1>
+                    <span class="subtitulo" style="font-size: 0.8em;">Engenharia Clínica</span>
                 </div>
-            <nav>
-                <ul class="nav-menu">
+            </div>
+
+            <nav class="menu-navegacao">
+                <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="servicos.html">Serviços</a></li>
                     <li><a href="equipamentos.html">Equipamentos</a></li>
@@ -19,20 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
         </header>
     `;
 
-    // 2. Injeta o menu no topo do site
+    // 2. Injeta esse HTML no topo da página (dentro do body)
     document.body.insertAdjacentHTML('afterbegin', menuHTML);
 
-    // 3. Lógica para deixar o link "Ativo" (Azul) automaticamente
-    const paginaAtual = window.location.pathname.split("/").pop(); // Pega "index.html"
-    const links = document.querySelectorAll('.nav-menu a');
+    // 3. Marca o link da página atual como "ativo" (azul)
+    const paginaAtual = window.location.pathname.split("/").pop();
+    const links = document.querySelectorAll('.menu-navegacao a');
 
     links.forEach(link => {
-        // Se o link for igual a pagina atual, adiciona a classe
-        if (link.getAttribute('href') === paginaAtual) {
-            link.classList.add('ativo');
-        }
-        // Caso especial: Se estiver na raiz (sem nome de arquivo), marca o index
-        if (paginaAtual === "" && link.getAttribute('href') === "index.html") {
+        const href = link.getAttribute('href');
+        if (href === paginaAtual || (paginaAtual === "" && href === "index.html")) {
             link.classList.add('ativo');
         }
     });
