@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <li><a href="servicos.html">Serviços</a></li>
                     <li><a href="equipamentos.html">Equipamentos</a></li>
                     <li><a href="contato.html" class="btn-contato">Contato</a></li>
+                    <li><a href="sobre.html">sobre nós</a></li>
                 </ul>
             </nav>
         </header>
