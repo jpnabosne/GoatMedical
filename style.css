@@ -1045,3 +1045,96 @@ details p {
         height: 60px;
     }
 }
+
+/* =========================================
+   PÁGINA DE EQUIPAMENTOS (NOVO)
+   ========================================= */
+
+/* Banner simples no topo da página */
+.banner-pagina {
+    background-color: var(--cor-primaria); /* Azul do seu tema */
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner-pagina h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.banner-pagina p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Container do Grid */
+.secao-lista-equipamentos {
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.container-grid {
+    display: grid;
+    /* Grid responsivo automático: ajusta o número de colunas conforme a tela */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* O Card de cada aparelho */
+.card-equipamento {
+    background-color: var(--cor-fundo); /* Fundo cinza claro */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-equipamento:hover {
+    transform: translateY(-5px); /* Sobe ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-color: var(--cor-primaria);
+}
+
+.icone-eq {
+    font-size: 3em; /* Tamanho do emoji */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card-equipamento h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.card-equipamento p {
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Chamada final (CTA) */
+.cta-equipamentos {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--cor-fundo);
+    border-top: 1px solid #ddd;
+}
+
+.cta-equipamentos h3 {
+    color: var(--cor-secundaria);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.cta-equipamentos p {
+    margin-bottom: 30px;
+    color: #555;
+}
