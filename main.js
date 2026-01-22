@@ -1,12 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. Cria o HTML do cabeçalho com as classes EXATAS do seu CSS
+    // Remove cabeçalho duplicado se existir
+    const headerExistente = document.querySelector('header');
+    if (headerExistente) {
+        headerExistente.remove();
+    }
+
+    // Cria o HTML
     const menuHTML = `
         <header class="cabecalho">
             <div class="logo-container">
-                <div>
-                    <h1 class="nome-empresa" style="font-size: 1.5em; margin:0;">Goat Medical</h1>
-                    <span class="subtitulo" style="font-size: 0.8em;">Engenharia Clínica</span>
+                <img src="logo.png" alt="Logo Goat Medical" class="logo-icone-img">
+                
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <span class="nome-empresa" style="line-height: 1;">Goat Medical</span>
+                    <span style="color: #ccc;">|</span> 
+                    <span class="subtitulo" style="margin: 0; line-height: 1;">Engenharia Clínica</span>
                 </div>
             </div>
 
@@ -21,16 +30,15 @@ document.addEventListener("DOMContentLoaded", function() {
         </header>
     `;
 
-    // 2. Injeta esse HTML no topo da página (dentro do body)
     document.body.insertAdjacentHTML('afterbegin', menuHTML);
 
-    // 3. Marca o link da página atual como "ativo" (azul)
+    // Marca o link ativo
     const paginaAtual = window.location.pathname.split("/").pop();
     const links = document.querySelectorAll('.menu-navegacao a');
 
     links.forEach(link => {
         const href = link.getAttribute('href');
-        if (href === paginaAtual || (paginaAtual === "" && href === "index.html")) {
+        if (href === paginaAtual || ((paginaAtual === "" || paginaAtual === "/") && href === "index.html")) {
             link.classList.add('ativo');
         }
     });
