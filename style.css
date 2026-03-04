@@ -1048,3 +1048,88 @@ details p {
         font-size: 1em;
     }
 }
+
+/* =========================================
+   15. AJUSTES FINAIS RODAPÉ (DINÂMICO)
+   ========================================= */
+
+/* Estilo para garantir que o rodapé injetado pelo JS ocupe o espaço correto */
+.rodape {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+    padding: 40px 5%;
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.rodape-conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Informações de Contato no Rodapé */
+.contato-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-size: 0.95em;
+}
+
+.contato-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estilo das Redes Sociais */
+.redes-sociais-footer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.redes-sociais-footer a {
+    color: var(--cor-clara);
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.redes-sociais-footer a:hover {
+    color: #ffd700; /* Dourado Goat */
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+
+.icone-rede {
+    font-size: 1.2rem;
+}
+
+/* Ajuste Responsivo para as Redes Sociais */
+@media (max-width: 600px) {
+    .redes-sociais-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .redes-sociais-footer a {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+    }
+}
