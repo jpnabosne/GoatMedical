@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
 
                 <div class="redes-sociais-footer">
-                    <a href="https://www.instagram.com/goat_medical" target="_blank">
+                    <a href="https://www.instagram.com/goatmedical" target="_blank">
                         <span class="icone-rede">📸</span> Instagram
                     </a>
                     <a href="https://www.linkedin.com/company/goat-medical" target="_blank">
