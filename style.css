@@ -111,11 +111,11 @@ section{padding:80px 0}
 
 /* ===== Marcas ===== */
 .marcas{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
-.marcas div{background:#fff;border:1px solid var(--line);border-radius:16px;aspect-ratio:1.4;display:grid;place-items:center;padding:12px;overflow:hidden;transition:transform .25s}
+.marcas div{background:#fff;border:1px solid var(--line);border-radius:16px;aspect-ratio:1.4;display:flex;align-items:center;justify-content:center;padding:16px;overflow:hidden;transition:transform .25s}
 .marcas div:hover{transform:translateY(-4px)}
-.marcas img{max-height:100%;object-fit:contain;filter:grayscale(1);opacity:.8;transition:.25s}
+.marcas img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply;filter:grayscale(1);opacity:.8;transition:.25s}
 .marcas div:hover img{filter:none;opacity:1}
-@media(max-width:900px){.marcas{grid-template-columns:repeat(3,1fr)}} 
+@media(max-width:900px){.marcas{grid-template-columns:repeat(3,1fr)}}
 
 /* ===== FAQ ===== */
 .faq{max-width:780px}
